@@ -9,7 +9,7 @@
     <link href="css/lib/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="css/step_02.css" rel="stylesheet" type="text/css"/>
 
     <!-- Custom Fonts -->
     <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css"/>
@@ -18,15 +18,26 @@
     <script type="text/javascript" src="js/lib/angular.min.js"></script>
 
 </head>
-<body >
-
-<div class="main">
+<body ng-app="myApp">
+<div class="header">
     <div class="container">
-        <h2> AngularJs</h2>
-        <ul class="list-group">
-            <li class="list-group-item"><a href="store_step_01.html">Step 01</a></li>
-            <li class="list-group-item"><a href="store_step_02.html">Step 02</a></li></li>
-        </ul>
+        <h1>App Market</h1>
+    </div>
+</div>
+
+<div class="main" ng-controller="MainController">
+    <div class="container">
+        <div class="card">
+            <app-info info="move"></app-info>
+        </div>
+
+        <div class="card">
+            <app-info info="shutterbugg"></app-info>
+        </div>
+
+        <div class="card">
+            <app-info info="gameboard"></app-info>
+        </div>
     </div>
 </div>
 
@@ -36,6 +47,9 @@
 
 <!-- Controllers -->
 <script src="js/controllers/MainController.js"></script>
+
+<!-- Directives -->
+<script src="js/directives/appInfo.js"></script>
 
 <!-- jquery -->
 <script type="text/javascript" src="js/lib/jquery-2.2.0.min.js"></script>
